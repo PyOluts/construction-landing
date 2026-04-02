@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="bg-brand-brown-dark hover:bg-brand-brown text-white px-10 py-4 text-lg font-bold rounded-lg shadow-xl transition-all duration-200 hover:scale-105"
+            className="bg-brand-brown hover:bg-brand-brown-dark text-white px-10 py-4 text-lg font-bold rounded-lg shadow-xl transition-all duration-200 hover:scale-105"
           >
             Get a Free Estimate
           </a>

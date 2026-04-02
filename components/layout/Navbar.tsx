@@ -15,7 +15,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-white/95 backdrop-blur shadow-sm z-50">
+    <header className={`fixed w-full z-50 shadow-sm transition-colors duration-200 ${open ? 'bg-white' : 'bg-white/95 backdrop-blur'}`}>
       <div className="max-w-6xl mx-auto relative flex items-center justify-between py-3 px-4 md:px-6 w-full lg:h-24">
         {/* Left: Logo */}
         <div className="flex md:flex-1 justify-start items-center">
@@ -73,7 +73,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-100 px-6 pb-6 space-y-4 shadow-sm">
+        <div className="md:hidden bg-white border-t border-slate-100 px-6 pt-6 pb-6 space-y-4 shadow-sm">
           {navLinks.map((l) => (
             <a
               key={l.href}
