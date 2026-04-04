@@ -18,8 +18,14 @@ export async function POST(req: Request) {
       );
     }
 
+    console.log("DEBUG: Using email:", process.env.GMAIL_USER);
+    console.log("DEBUG: Password length:", process.env.GMAIL_APP_PASSWORD?.length);
+    console.log("DEBUG: Password starts with:", process.env.GMAIL_APP_PASSWORD?.substring(0, 3));
+
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
