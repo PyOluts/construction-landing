@@ -34,7 +34,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"Premier Deck & Porch Website" <${process.env.GMAIL_USER}>`,
-      to: "premierdeckandporch@gmail.com",
+      to: "premierdeckandporch@gmail.com", // Возвращаем почту заказчика
       subject: `New Estimate Request from ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
